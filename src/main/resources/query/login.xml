@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.admin.study.login.dao.ILoginDao">
+	<select id="checkUser" resultType="com.admin.study.login.dto.LoginDto">
+<!-- 		select ADMIN_ID from MEMBER_TB where ADMIN_ID=#{param1} and ADMIN_PWD=#{param2} -->
+		select ADMIN_ID, ADMIN_NM, TEL_NO, MOBILE_NO, EMAIL from MEMBER_TB where ADMIN_ID=#{param1} and ADMIN_PWD=#{param2}
+	</select>
+</mapper>
